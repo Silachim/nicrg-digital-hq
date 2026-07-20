@@ -3,7 +3,7 @@ import Container from "@/components/common/Container";
 
 type SectionProps = {
   children: ReactNode;
-  background?: "white" | "slate" | "emerald";
+  background?: "white" | "slate" | "emerald" | "gradient";
   className?: string;
   decoration?: ReactNode;
 };
@@ -18,6 +18,8 @@ export default function Section({
     white: "bg-white",
     slate: "bg-slate-50",
     emerald: "bg-emerald-50",
+    gradient:
+      "bg-gradient-to-br from-slate-950 via-slate-900 to-emerald-950 text-white",
   };
 
   return (

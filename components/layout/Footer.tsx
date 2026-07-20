@@ -1,16 +1,18 @@
 import Link from "next/link";
-
 import Container from "@/components/common/Container";
 
 import {
   Mail,
   Phone,
   MapPin,
-  Facebook,
-  Linkedin,
-  Twitter,
-  Youtube,
 } from "lucide-react";
+
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 
 const quickLinks = [
   { name: "About", href: "/about" },
@@ -60,7 +62,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-slate-300 transition hover:text-white"
+                    className="text-slate-300 transition hover:text-emerald-400"
                   >
                     {link.name}
                   </Link>
@@ -96,21 +98,21 @@ export default function Footer() {
             <div className="mt-6 space-y-5">
 
               <div className="flex items-start gap-3">
-                <Mail size={18} />
+                <Mail size={18} className="mt-1 text-emerald-400" />
                 <span className="text-slate-300">
                   info@nicrg.org
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
-                <Phone size={18} />
+                <Phone size={18} className="mt-1 text-emerald-400" />
                 <span className="text-slate-300">
                   +234 XXX XXX XXXX
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
-                <MapPin size={18} />
+                <MapPin size={18} className="mt-1 text-emerald-400" />
                 <span className="text-slate-300">
                   Nigeria
                 </span>
@@ -118,36 +120,49 @@ export default function Footer() {
 
             </div>
 
-            <div className="mt-8 flex gap-4">
+            {/* Social Media */}
+            <div className="mt-8 flex items-center gap-5">
 
-              <Facebook
-                className="cursor-pointer transition hover:text-emerald-400"
-                size={20}
-              />
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="text-slate-300 transition hover:text-emerald-400"
+              >
+                <FaFacebook size={22} />
+              </a>
 
-              <Linkedin
-                className="cursor-pointer transition hover:text-emerald-400"
-                size={20}
-              />
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                className="text-slate-300 transition hover:text-emerald-400"
+              >
+                <FaLinkedin size={22} />
+              </a>
 
-              <Twitter
-                className="cursor-pointer transition hover:text-emerald-400"
-                size={20}
-              />
+              <a
+                href="#"
+                aria-label="X"
+                className="text-slate-300 transition hover:text-emerald-400"
+              >
+                <FaXTwitter size={22} />
+              </a>
 
-              <Youtube
-                className="cursor-pointer transition hover:text-emerald-400"
-                size={20}
-              />
+              <a
+                href="#"
+                aria-label="YouTube"
+                className="text-slate-300 transition hover:text-emerald-400"
+              >
+                <FaYoutube size={22} />
+              </a>
 
             </div>
+
           </div>
 
         </div>
 
         <div className="border-t border-slate-800 py-8 text-center text-sm text-slate-400">
-          © {new Date().getFullYear()} Nigerian Interdisciplinary Critical
-          Research Group (NICRG). All Rights Reserved.
+          © {new Date().getFullYear()} Nigerian Interdisciplinary Critical Research Group (NICRG). All Rights Reserved.
         </div>
       </Container>
     </footer>
