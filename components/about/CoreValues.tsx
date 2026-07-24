@@ -1,4 +1,3 @@
-import Container from "@/components/common/Container";
 import Section from "@/components/ui/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Card from "@/components/ui/Card";

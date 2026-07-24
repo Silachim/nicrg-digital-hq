@@ -1,5 +1,4 @@
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import PageTemplate from "@/components/common/PageTemplate";
 
 import {
   AboutHero,
@@ -13,9 +12,39 @@ import {
 
 export default function AboutPage() {
   return (
-    <>
-      <Navbar />
-
+    <PageTemplate
+      breadcrumbs={[
+        {
+          label: "Home",
+          href: "/",
+        },
+        {
+          label: "About NICRG",
+        },
+      ]}
+      next={{
+        title: "Research",
+        href: "/research",
+      }}
+      related={[
+        {
+          title: "Vision & Mission",
+          href: "/about#vision",
+        },
+        {
+          title: "Leadership",
+          href: "/leadership",
+        },
+        {
+          title: "Governance",
+          href: "/governance",
+        },
+        {
+          title: "Partners",
+          href: "/partners",
+        },
+      ]}
+    >
       <main>
         <AboutHero />
         <Identity />
@@ -25,8 +54,6 @@ export default function AboutPage() {
         <Roadmap />
         <AboutCTA />
       </main>
-
-      <Footer />
-    </>
+    </PageTemplate>
   );
 }

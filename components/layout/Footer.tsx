@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+
 import Container from "@/components/common/Container";
 
 import {
@@ -37,17 +39,26 @@ export default function Footer() {
       <Container>
         <div className="grid gap-14 py-20 md:grid-cols-2 xl:grid-cols-4">
 
-          {/* NICRG */}
+          {/* Organization */}
           <div>
-            <h2 className="text-2xl font-bold">
-              NICRG
-            </h2>
+            <Link
+              href="/"
+              className="inline-block"
+            >
+              <Image
+                src="/branding/nicrg-logo-white.png"
+                alt="Nigerian Interdisciplinary Critical Research Group"
+                width={240}
+                height={70}
+                className="h-auto w-56"
+              />
+            </Link>
 
-            <p className="mt-6 leading-8 text-slate-300">
-              Nigerian Interdisciplinary Critical Research Group is committed to
-              advancing evidence-informed research, innovation, policy, and
-              sustainable national development through interdisciplinary
-              collaboration.
+            <p className="mt-8 leading-8 text-slate-300">
+              The Nigerian Interdisciplinary Critical Research Group (NICRG)
+              is an independent, non-partisan research institute advancing
+              interdisciplinary scholarship, evidence-informed policymaking,
+              innovation, and sustainable development across Nigeria and beyond.
             </p>
           </div>
 
@@ -98,21 +109,30 @@ export default function Footer() {
             <div className="mt-6 space-y-5">
 
               <div className="flex items-start gap-3">
-                <Mail size={18} className="mt-1 text-emerald-400" />
+                <Mail
+                  size={18}
+                  className="mt-1 text-emerald-400"
+                />
                 <span className="text-slate-300">
                   info@nicrg.org
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
-                <Phone size={18} className="mt-1 text-emerald-400" />
+                <Phone
+                  size={18}
+                  className="mt-1 text-emerald-400"
+                />
                 <span className="text-slate-300">
                   +234 XXX XXX XXXX
                 </span>
               </div>
 
               <div className="flex items-start gap-3">
-                <MapPin size={18} className="mt-1 text-emerald-400" />
+                <MapPin
+                  size={18}
+                  className="mt-1 text-emerald-400"
+                />
                 <span className="text-slate-300">
                   Nigeria
                 </span>
@@ -120,7 +140,7 @@ export default function Footer() {
 
             </div>
 
-            {/* Social Media */}
+            {/* Social */}
             <div className="mt-8 flex items-center gap-5">
 
               <a
@@ -164,6 +184,7 @@ export default function Footer() {
         <div className="border-t border-slate-800 py-8 text-center text-sm text-slate-400">
           © {new Date().getFullYear()} Nigerian Interdisciplinary Critical Research Group (NICRG). All Rights Reserved.
         </div>
+
       </Container>
     </footer>
   );
